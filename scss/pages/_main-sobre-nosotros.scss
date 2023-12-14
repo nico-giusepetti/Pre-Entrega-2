@@ -1,0 +1,75 @@
+/* Main - Sobre nosotros */
+
+.main-sobre-nosotros {
+    text-align: center;
+    overflow-x: hidden;
+
+    div {
+        .seccion1 {
+            height: 50vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imagenes/banner.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            h1, p {
+                color: white;
+            }
+        }
+
+        .container-info {
+            padding: 30px;
+            padding-top: 0;
+            background: linear-gradient(to bottom, black, #F7D72C);
+
+            :nth-child(odd) {
+                display: flex;
+            }
+
+            :nth-child(even) {
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            section {
+                padding: 30px;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 5px 5px 15px black;
+                background-color: rgb(232, 238, 244);
+                margin-bottom: 50px;
+
+                div{
+                    img {
+                        object-fit: cover;
+                        height: 50vh;
+                        width: 25vw;
+                        border-radius: 50%;
+                    }
+                }
+
+                .parrafo {
+                    display: block;
+                    width: 50vw;
+    
+                    h2 {
+                        text-align: center;
+                    }
+    
+                    p {
+                        text-align: left;
+                    }
+                }
+            }            
+        }
+
+        .seccion2 {
+            background: linear-gradient(to bottom, #F7D72C, #8F8F8F);
+        }
+    }
+}

@@ -1,0 +1,103 @@
+/* Main Contacto */
+
+.main-contacto {
+    background: linear-gradient(to bottom, black, #F7D72C, #8F8F8F);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1fr, 0.5fr;
+    grid-template-areas: "seccion1 seccion1" "seccion2 seccion4" "seccion3 seccion3";
+    font-family: 'Reno', sans-serif;
+    font-size: 20px;
+    overflow: hidden;
+
+    .seccion1 {
+        grid-area: seccion1;
+        text-align: center;
+        padding: 5%;
+        color: rgba(255, 255, 255, 0.779);
+
+        h1 {
+            font-weight: bold;
+            color: white;
+        }
+    }
+
+    .seccion2 {
+        background-color: white;
+        grid-area: seccion2;
+        justify-content: center;
+        align-content: center;
+        padding: 20px;
+        margin: 30px;
+        border-radius: 40px;
+        box-shadow: 5px 5px 10px black;
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+        /*componente formulario va en esta posición */   
+    }
+
+    .seccion3 {
+        grid-area: seccion3;
+        text-align: center;
+        padding: 20px;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        iframe {
+            width: 80vw;
+            border-radius: 20px;
+        }
+    }
+
+    .seccion4 {
+        grid-area: seccion4;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        color: black;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-top: 20px;
+        }
+
+        p:nth-last-child(2) {
+            background-color: #474747;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .reloj {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 200px;
+                height: 200px;
+                margin-right: 20px;
+                border-radius: 50%;
+            }
+
+            p {
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+    }
+}

@@ -3,15 +3,15 @@
 /* ---ESTILOS GENERALES--- */
 
 /*reset*/
-*{
+/* *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} */
 
 
 /* Header - general */
-header{
+/* header{
     background-color: black;
     position: sticky;
     top: 0;
@@ -67,10 +67,10 @@ header nav ul li a{
     font-size: 25px;
     color: aliceblue;
     text-decoration: none;
-}
+} */
 
 /* Footer - general */
-footer{
+/* footer{
     text-align: center;
     padding: 15px;
     padding-bottom: 5px;
@@ -118,19 +118,20 @@ footer .redes ul li a img{
 
 footer .copyright{
     text-align: center;
-}
+} */
 
 
 
 /* ---HOME / index--- */
 
 /* Main */
+/*
 .main-home{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(../imagenes/fondo.jpg); /*img de fondo y se le da opacidad*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(../imagenes/fondo.jpg); /*img de fondo y se le da opacidad*/   /*
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment:fixed; /*fijar fondo */
+    background-attachment:fixed; /*fijar fondo */   /*
     font-family:'Reno', sans-serif;
     font-size: 25px;
     text-align: center;
@@ -147,7 +148,7 @@ footer .copyright{
 .main-home .seccion1 h1{
     font-size: 3rem;
     font-weight: 750;
-    text-transform: uppercase; /*texto a letra mayúscula*/
+    text-transform: uppercase; /*texto a letra mayúscula*/   /*
     padding-bottom: 40px;
 }
 
@@ -188,7 +189,7 @@ footer .copyright{
     margin: 15px;
     width: 250px;
     height: 320px;
-    box-shadow: 2px 2px 10px white; /*efecto 3D a las cards*/
+    box-shadow: 2px 2px 10px white; /*efecto 3D a las cards*/    /*
     border-radius: 10px;
     border: solid 2px black;
     overflow: hidden;
@@ -232,10 +233,10 @@ footer .copyright{
     margin: 15px;
     cursor: pointer;
 }
-
+/*
 
 /*---CONTACTO---*/
-.main-contacto{
+/* .main-contacto{
     background: linear-gradient(to bottom, black, #F7D72C, #8F8F8F);
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -383,11 +384,11 @@ footer .copyright{
 .main-contacto .seccion4 .reloj p{
     margin-bottom: 0;
     text-align: left;
-}
+} */
 
 
 /*---SOBRE NOSOTROS---*/
-.main-sobre-nosotros{
+/* .main-sobre-nosotros{
     text-align: center; 
     overflow-x: hidden; 
 }
@@ -459,11 +460,11 @@ footer .copyright{
 
 .main-sobre-nosotros div .seccion2{
     background: linear-gradient(to bottom, #F7D72C, #8F8F8F);
-}
+} */
 
 
 /*---TIENDA---*/
-.main-tienda{
+/* .main-tienda{
     text-align: center;
     background: linear-gradient(to bottom, black, #F7D72C, #8F8F8F);
 }
@@ -532,11 +533,11 @@ footer .copyright{
     object-fit: cover;
     border-radius: 10px 10px 0 0;
     overflow: hidden;
-}
+} */
 
 
 /*---INSTALACIONES---*/
-.main-instalaciones{
+/* .main-instalaciones{
     text-align: center;
     background: linear-gradient(to bottom, black, #F7D72C, #8F8F8F);
 }
@@ -708,14 +709,14 @@ footer .copyright{
     background-color: black;
     border-radius: 20px;
     border: solid 2px white;
-}
+} */
 /* --- RESPONSIVE --- */
 
 /* [VISTA TABLET] */
-@media screen and (max-width: 1024px){
+/* @media screen and (max-width: 1024px){ */
     
     /* Header - general */
-    header{
+    /* header{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -759,11 +760,11 @@ footer .copyright{
 
     #btn_menu:checked ~ .menu{
         visibility: visible;
-    }
+    } */
 
 
     /* ---HOME / index--- */
-    .main-home .seccion1{
+    /* .main-home .seccion1{
         padding-bottom: 10px;
     }
 
@@ -785,11 +786,11 @@ footer .copyright{
 
     .main-home .seccion3 p{
         font-size: 1.5rem;
-    }
+    } */
 
 
     /*---CONTACTO---*/
-    .main-contacto{
+    /* .main-contacto{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -808,20 +809,20 @@ footer .copyright{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }  
+    }   */
     
 
     /*---SOBRE NOSOTROS---*/
-    .main-sobre-nosotros div .container-info img{
+    /* .main-sobre-nosotros div .container-info img{
         height: 40%;
     }
-}
+} */
 
 /* [VISTA MOBILE] */
-@media screen and (max-width: 768px){
+/* @media screen and (max-width: 768px){ */
 
     /*---CONTACTO---*/
-    .main-contacto .seccion2{
+    /* .main-contacto .seccion2{
         padding: 5px;
     }
 
@@ -838,10 +839,10 @@ footer .copyright{
         width: 80vw;
         border-radius: 50%;
         width: auto;
-    }
+    } */
 
     /*---SOBRE NOSOTROS---*/
-    .main-sobre-nosotros div .container-info :nth-child(odd){
+    /* .main-sobre-nosotros div .container-info :nth-child(odd){
         flex-direction: column;
     }
     
@@ -868,5 +869,5 @@ footer .copyright{
         justify-content: center;
     }
 
-}
+} */
 /* - FIN CSS - */

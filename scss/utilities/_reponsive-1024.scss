@@ -1,0 +1,113 @@
+/* [VISTA TABLET] */ 
+
+
+@media screen and (max-width: 1024px) {
+    /* Header - general */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            display: block;
+            height: 120px;
+            width: 120px;
+            margin-left: 25px;
+        }
+
+        #btn_menu:checked~.menu {
+            visibility: visible;
+        }
+
+        label {
+            display: block;
+            position: relative;
+            right: 25px;
+            border-radius: 50%;
+
+            img {
+                width: 50px;
+            }
+        }
+
+        .menu{
+            position: absolute;
+            top: 120px;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+            visibility: hidden;
+            justify-content: center;
+
+            a{
+                .logo-hidden {
+                    display: none;
+                }
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        } 
+    }
+
+    
+
+    /* ---HOME / index--- */
+
+    .main-home {
+        .seccion1 {
+            padding-bottom: 10px;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        .seccion3 {
+            padding-top: 0;
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    /*---CONTACTO---*/
+
+    .main-contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .seccion2 {
+            width: 80%;
+        }
+
+        .seccion3 iframe {
+            width: 80vw;
+        }
+
+        .seccion4 .reloj {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    /*---SOBRE NOSOTROS---*/
+
+    .main-sobre-nosotros div .container-info img {
+        height: 40%;
+    }
+}

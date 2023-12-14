@@ -1,0 +1,52 @@
+/* Header */
+
+header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    z-index: 10;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+
+    .logo, #btn_menu, label {
+        display: none;
+    }
+
+    /* nav */
+    .menu {
+        background-color: black;
+        top: 60px;
+        place-self: center end;
+        gap: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+            justify-self: start;
+    
+            .logo-hidden {
+                height: 120px;
+                width: 120px;
+                margin-left: 20px;
+            }
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                list-style-type: none;
+                padding-right: 30px;
+
+                a {
+                    font-size: 25px;
+                    color: aliceblue;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

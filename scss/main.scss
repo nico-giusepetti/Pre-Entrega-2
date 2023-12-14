@@ -1,0 +1,21 @@
+/* Styles Globals */
+@import "utilities/variables";
+@import "utilities/reset";
+
+/*Styles Components*/
+@import "components/header.scss";
+@import "components/footer";
+
+@import "components/formulario-contacto";
+
+
+/* Styles Pages */
+@import "pages/main-index";
+@import "pages/main-contacto";
+@import "pages/main-sobre-nosotros";
+@import "pages/main-instalaciones";
+@import "pages/main-tienda";
+
+/* Styles Responsive */
+@import "utilities/reponsive-1024";
+@import "utilities/responsive-768";
