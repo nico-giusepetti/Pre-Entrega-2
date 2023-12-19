@@ -1,7 +1,7 @@
 /* Main Contacto */
 
 .main-contacto {
-    background: linear-gradient(to bottom, black, #F7D72C, #8F8F8F);
+    background-color: #121212;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr, 1fr, 0.5fr;
@@ -15,10 +15,20 @@
         text-align: center;
         padding: 5%;
         color: rgba(255, 255, 255, 0.779);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imagenes/fondo-grupo.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #1E1E1E;
 
         h1 {
             font-weight: bold;
+            color: nth($list: $colores, $n: 1 );
+            text-shadow: 3px 3px 5px grey;
+        }
+
+        p{
             color: white;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
         }
     }
 
@@ -30,7 +40,8 @@
         padding: 20px;
         margin: 30px;
         border-radius: 40px;
-        box-shadow: 5px 5px 10px black;
+        border: solid 2px black;
+        box-shadow: 3px 3px 10px #F7D72C;
 
         h2 {
             text-align: center;
@@ -49,6 +60,7 @@
         h2 {
             text-transform: uppercase;
             font-weight: bold;
+            color: #F7D72C;
         }
 
         iframe {
@@ -64,16 +76,18 @@
         flex-direction: column;
         text-align: center;
         justify-content: center;
-        color: black;
+        color: white;
 
         h2 {
             text-transform: uppercase;
             font-weight: bold;
+            color: #F7D72C;
         }
 
         h3 {
             text-transform: uppercase;
             font-weight: bold;
+            color: #F7D72C;
             padding-top: 20px;
         }
 

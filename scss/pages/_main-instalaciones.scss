@@ -2,11 +2,11 @@
 
 .main-instalaciones {
     text-align: center;
-    background: linear-gradient(to bottom, black, #F7D72C, #8F8F8F);
+    background: #121212;
 
     h1 {
         font-weight: bold;
-        color: #F7D72C;
+        color: nth($list: $colores, $n: 1);
         padding-top: 20px;
     }
     
@@ -15,152 +15,97 @@
         width: 40vw;
         object-fit: cover;
         border-radius: 20px;
-        border: solid 1px white;
+        border: solid 1px nth($list: $colores, $n: 3);
     }
 
     .seccion-entrenamiento {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 0.5fr, repeat(2, 1fr);
-        gap: 5px;
+        @include grid(repeat(2, 1fr), (0.5fr, repeat(2, 1fr)), 5px, start, center);
         grid-template-areas: "titulo titulo" "pesas cardio" "funcional sala";
-        align-items: center;
-        justify-items: center;
-
+        
         .titulo {
-            grid-area: titulo;
-            padding: 10px;
-            color: white;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            text-transform: uppercase;
-            -webkit-text-stroke: 2px black;
-            margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.83);
-            width: 100%;
+            @include titulo-seccion;
         }
 
         .pesas {
             grid-area: pesas;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-            background-color: black;
-            border-radius: 20px;
-            border: solid 2px white;
+            @include tarjeta-instalaciones;
+            h3{
+                @include titulo-tarjeta;
+            }
         }
 
         .cardio {
             grid-area: cardio;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-            background-color: black;
-            border-radius: 20px;
-            border: solid 2px white;
+            @include tarjeta-instalaciones;
+            h3{
+                @include titulo-tarjeta;
+            }
         }
 
         .funcional {
             grid-area: funcional;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-            background-color: black;
-            border-radius: 20px;
-            border: solid 2px white;
+            @include tarjeta-instalaciones;
+            h3{
+                @include titulo-tarjeta;
+            }
         }
 
         .sala {
             grid-area: sala;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-            background-color: black;
-            border-radius: 20px;
-            border: solid 2px white;
+            @include tarjeta-instalaciones;
+            h3{
+                @include titulo-tarjeta;
+            }
         }
     }
 
     .seccion-relajacion {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 0.5fr, 1fr;
-        gap: 5px;
+        @include grid(repeat(2, 1fr), (0.5fr, 1fr), 5px, start, center );
         grid-template-areas: "titulo titulo" "estiramiento descanso";
-        align-items: center;
-        justify-items: center;
 
         .titulo {
-            grid-area: titulo;
-            padding: 10px;
-            color: white;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            text-transform: uppercase;
-            -webkit-text-stroke: 2px black;
-            margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.83);
-            width: 100%;
+            @include titulo-seccion;
         }
 
         .estiramiento {
             grid-area: estiramiento;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-            background-color: black;
-            border-radius: 20px;
-            border: solid 2px white;
+            @include tarjeta-instalaciones;
+            h3{
+                @include titulo-tarjeta;
+            }
         }
 
         .descanso {
             grid-area: descanso;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-            background-color: black;
-            border-radius: 20px;
-            border: solid 2px white;
+            @include tarjeta-instalaciones;
+            h3{
+                @include titulo-tarjeta;
+            }
         }
     }
 
     .seccion-vestuario {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 0.5fr, 1fr;
-        gap: 5px;
+        @include grid(repeat(2, 1fr), (0.5fr, 1fr), 5px, start, center );
         grid-template-areas: "titulo titulo" "vestuarios duchas";
-        align-items: center;
-        justify-items: center;
 
         .titulo {
-            grid-area: titulo;
-            padding: 10px;
-            color: white;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            text-transform: uppercase;
-            -webkit-text-stroke: 2px black;
-            margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.83);
-            width: 100%;
+            @include titulo-seccion;
         }
 
         .vestuarios {
             grid-area: vestuarios;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-            background-color: black;
-            border-radius: 20px;
-            border: solid 2px white;
+            @include tarjeta-instalaciones;
+            h3{
+                @include titulo-tarjeta;
+            }
         }
 
         .duchas {
             grid-area: duchas;
-            padding: 10px;
-            margin: 10px;
-            color: white;
-            background-color: black;
-            border-radius: 20px;
-            border: solid 2px white;
+            @include tarjeta-instalaciones;
+            h3{
+                @include titulo-tarjeta;
+            }
         }
     }
 }

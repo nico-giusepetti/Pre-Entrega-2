@@ -1,0 +1,52 @@
+//mixin para flex
+@mixin flex($flex-direction, $justify-content, $align-items){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+//mixin para grid
+@mixin grid($columns, $rows, $gap, $align-items, $justify-items){
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+    align-items: $align-items;
+    justify-items: $justify-items;
+}
+
+
+
+
+//mixins para la pagina instalaciones
+//titulo de las secciones de instalaciones
+@mixin titulo-seccion{
+    grid-area: titulo;
+    color: nth($list: $colores, $n: 3 );
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px black;
+    margin-top: 20px;
+    background-color: nth($list: $colores, $n: 3 );
+    width: 100%;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+
+//Utilizado para las tarjetas de la pagina instalaciones
+@mixin tarjeta-instalaciones{
+    padding: 10px;
+    margin: 10px;
+    color: nth($list: $colores, $n: 3 );
+    background-color: nth($list: $colores, $n: 2 );
+    border-radius: 20px;
+    border: solid 4px nth($list: $colores, $n: 1 );
+    box-shadow: 2px 2px 8px nth($list: $colores, $n: 3 );
+}
+
+//titulo tarjetas-instalaciones
+@mixin titulo-tarjeta{
+    color: nth($list: $colores, $n: 1 );
+    text-transform: uppercase;
+}

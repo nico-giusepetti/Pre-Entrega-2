@@ -2,6 +2,30 @@
 
 
 @media screen and (max-width: 768px) {
+    /*---HOME---*/
+    .main-home{
+        .seccion1{
+            height: 80vh;
+            h1{
+                font-size: 2rem; 
+            }
+            p{
+                font-size: 1rem;
+                padding: 20px;
+            }
+        }
+
+        .seccion3{
+            h2{
+                font-size: 2rem;
+                padding-top: 20px;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+
     /*---CONTACTO---*/
 
     .main-contacto {
@@ -25,31 +49,59 @@
         }
     }
 
+    
     /*---SOBRE NOSOTROS---*/
 
-    .main-sobre-nosotros div .container-info {
+    .main-sobre-nosotros{
+        div{
+            .container-info {
 
-        :nth-child(odd),
-        :nth-child(even) {
-            flex-direction: column;
-        }
+                :nth-child(odd),
+                :nth-child(even) {
+                    flex-direction: column;
+                }
 
-        .parrafo {
-            width: 80vw;
-            padding: 5px;
-
-            p {
-                text-align: center;
-            }
-        }
-
-        img {
-            height: 200px;
-            width: 200px;
-        }
-
-        .parrafo h2 {
-            justify-content: center;
+                section{
+                    div{
+                        img {
+                            height: 200px;
+                            width: 200px;
+                        }
+                    }
+        
+                    .parrafo {
+                        width: 80vw;
+                        padding: 5px;
+                        
+                        h2 {
+                            justify-content: center;
+                        }
+        
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            } 
         }
     }
+
+    .main-instalaciones{
+        padding: 20px;
+        .seccion-entrenamiento{
+            @include grid(1fr, (0.5fr, repeat(4, 1fr)), 5px, start, center);
+            grid-template-areas: "titulo" "pesas" "cardio" "funcional" "sala";
+        }
+
+        .seccion-relajacion{
+            @include grid(1fr, (0.5fr, repeat(2, 1fr)), 5px, start, center );
+            grid-template-areas: "titulo" "estiramiento" "descanso";
+        }
+
+        .seccion-vestuario{
+            @include grid(1fr, (0.5fr, repeat(2, 1fr)), 5px, start, center );
+            grid-template-areas: "titulo" "vestuarios" "duchas";
+        }
+    }
+
 }
