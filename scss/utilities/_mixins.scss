@@ -17,21 +17,18 @@
 }
 
 
-
-
-//mixins para la pagina instalaciones
+//mixins utilizados en pagina instalaciones
 //titulo de las secciones de instalaciones
 @mixin titulo-seccion{
     grid-area: titulo;
     color: nth($list: $colores, $n: 3 );
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px nth($list: $colores, $n: 2);
     margin-top: 20px;
     background-color: nth($list: $colores, $n: 3 );
     width: 100%;
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
+    border-top: solid 2px nth($list: $colores, $n: 2);
+    border-bottom: solid 2px nth($list: $colores, $n: 2);
 }
 
 //Utilizado para las tarjetas de la pagina instalaciones

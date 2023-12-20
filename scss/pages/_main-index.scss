@@ -1,10 +1,9 @@
 /* Main Index / --HOME-- */
 
 .main-home {
-    font-family: 'Reno', sans-serif;
     font-size: 25px;
     text-align: center;
-    color: white;
+    color: nth($list: $colores, $n: 3);
     overflow-x: hidden;
 
     .seccion1 {
@@ -15,15 +14,17 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
         h1 {
             font-size: 3rem;
             font-weight: 750;
+            padding: 0 30px 0 30px;
             text-transform: uppercase; /*texto a letra mayúscula*/
             text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
             padding-bottom: 40px;
 
             strong {
-                color: #FFDF01;
+                color: nth($list: $colores, $n: 1);
             }
         }
 
@@ -36,47 +37,48 @@
     }
 
     .seccion2 {
-        display: flex;
-        flex-direction: column;
+        @include flex(column, center, center);
         background-image: linear-gradient(#080B0A, #373737);
 
         h2 {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: $fuente-titulo;
             padding-bottom: 15px;
             margin-top: 15px;
-            // background-color: rgba(255, 255, 255, 0.527);
-            color: white;
+            color: nth($list: $colores, $n: 1);
             text-transform: uppercase;
             text-shadow: 5px 5px 5px rgb(0, 0, 0);
         }
 
         .container-cards {
-            display: flex;
+            @include flex(row, center, none);
             padding: 0px 10px 50px 15px;
             flex-wrap: wrap;
-            justify-content: center;
 
             .card {
                 list-style-type: none;
                 padding: 10px;
                 margin: 15px;
                 width: 250px;
-                height: 320px;
-                box-shadow: 2px 2px 10px white;
+                height: 350px;
+                box-shadow: 2px 2px 10px nth($list: $colores, $n: 1);
                 border-radius: 10px;
-                border: solid 2px black;
+                border: solid 2px nth($list: $colores, $n: 2);
                 overflow: hidden;
-                background-color: white;
+                background-color: nth($list: $colores, $n: 3);
                 position: static;
-
+                &:hover{
+                    transform: scale(1.1);
+                }
+                
                 h3 {
                     padding-bottom: 30px;
-                    color: black;
+                    color: nth($list: $colores, $n: 2);
+                    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.467);
                 }
     
                 p {
                     font-size: 18px;
-                    color: black;
+                    color: nth($list: $colores, $n: 2);
                     text-align: center;
                 }
             }
@@ -84,7 +86,7 @@
     }
 
     .seccion3 {
-        padding: 50px;
+        padding: 30px;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/fondo.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -103,13 +105,13 @@
 
         a {
             text-decoration: none;
-            background-color: #FFDF01;
+            background-color: nth($list: $colores, $n: 1);
             font-size: 18px;
-            color: black;
+            color: nth($list: $colores, $n: 2);
             padding: 10px;
             border-radius: 15px;
-            border: 2px solid black;
-            box-shadow: 2px 2px 10px white;
+            border: 2px solid nth($list: $colores, $n: 2);
+            box-shadow: 2px 2px 10px nth($list: $colores, $n: 3);
             margin: 15px;
             cursor: pointer;
         }

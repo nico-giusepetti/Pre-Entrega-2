@@ -3,6 +3,8 @@
 .main-sobre-nosotros {
     text-align: center;
     overflow-x: hidden;
+    font-family: $fuente-principal;
+    font-size: 20px;
 
     div {
         .seccion1 {
@@ -12,20 +14,22 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-
-            h1, p {
-                color: white;
+            @include flex(column, center, center);
+            
+            h1{
+                font-weight: bold;
+                color: nth($list: $colores, $n: 1);
+            }
+            p {
+                color: nth($list: $colores, $n: 3);
+                padding: 20px;
             }
         }
 
         .container-info {
             padding: 30px;
             padding-top: 0;
-            background: linear-gradient(to bottom, black 10%, #F7D72C);
+            background: linear-gradient(to bottom, nth($list: $colores, $n: 2) 10%, nth($list: $colores, $n: 1));
 
             :nth-child(odd) {
                 display: flex;
@@ -40,7 +44,7 @@
                 padding: 30px;
                 align-items: center;
                 justify-content: space-between;
-                box-shadow: 5px 5px 15px black;
+                box-shadow: 5px 5px 15px nth($list: $colores, $n: 2);
                 background-color: rgb(232, 238, 244);
                 margin-bottom: 50px;
 
@@ -59,6 +63,7 @@
     
                     h2 {
                         text-align: center;
+                        font-weight: bold;
                     }
     
                     p {
@@ -69,7 +74,7 @@
         }
 
         .seccion2 {
-            background: #F7D72C;
+            background: nth($list: $colores, $n: 1);
         }
     }
 }

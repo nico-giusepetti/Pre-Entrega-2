@@ -5,11 +5,11 @@
 @import "utilities/lists";
 @import "utilities/mixins";
 
-/*Styles Components*/
+/* Styles Components - Globals*/
 @import "components/header.scss";
 @import "components/footer";
 
-@import "components/formulario-contacto";
+
 
 /* Styles Pages */
 @import "pages/main-index";

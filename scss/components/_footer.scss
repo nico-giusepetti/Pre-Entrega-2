@@ -3,10 +3,10 @@
 footer {
     text-align: center;
     padding-bottom: 5px;
-    border-top: 2px solid white;
-    // background-color: #8F8F8F;
-    background-color: black;
+    border-top: 2px solid nth($list: $colores, $n: 3);
+    background-color: nth($list: $colores, $n: 2);
     display: grid;
+
 
     img {
         height: 140px;
@@ -14,8 +14,6 @@ footer {
         top: 50px;
         left: 130px;
         place-self: center;
-        // filter: drop-shadow(5px 5px 3px #FFDF01);
-        // filter: drop-shadow(1px 1px 3px white);
     }
 
     .redes {
@@ -34,8 +32,7 @@ footer {
                     text-decoration: none;
 
                     img {
-                        // background-color: #8F8F8F;
-                        background-color: black;
+                        background-color: nth($list: $colores, $n: 2);
                         height: 30px;
                         width: 30px;
                         padding: 0;
@@ -48,7 +45,7 @@ footer {
 
     .copyright {
         text-align: center;
-        color: white;
+        color: nth($list: $colores, $n: 3);
         margin-top: 0.5em;
     }
 }

@@ -7,7 +7,7 @@
     h1 {
         font-weight: bold;
         color: nth($list: $colores, $n: 1);
-        padding-top: 20px;
+        padding: 20px;
     }
     
     img { /*estilos para todas las img*/
@@ -24,6 +24,9 @@
         
         .titulo {
             @include titulo-seccion;
+            h2{
+                font-family: $fuente-titulo;
+            }
         }
 
         .pesas {
@@ -32,30 +35,24 @@
             h3{
                 @include titulo-tarjeta;
             }
+            p{
+                padding-top: 20px;
+            }
         }
 
         .cardio {
+            @extend .pesas;
             grid-area: cardio;
-            @include tarjeta-instalaciones;
-            h3{
-                @include titulo-tarjeta;
-            }
         }
 
         .funcional {
+            @extend .pesas;
             grid-area: funcional;
-            @include tarjeta-instalaciones;
-            h3{
-                @include titulo-tarjeta;
-            }
         }
 
         .sala {
+            @extend .pesas;
             grid-area: sala;
-            @include tarjeta-instalaciones;
-            h3{
-                @include titulo-tarjeta;
-            }
         }
     }
 
@@ -65,6 +62,9 @@
 
         .titulo {
             @include titulo-seccion;
+            h2{
+                font-family: $fuente-titulo;
+            }
         }
 
         .estiramiento {
@@ -73,23 +73,26 @@
             h3{
                 @include titulo-tarjeta;
             }
+            p{
+                padding-top: 20px;
+            }
         }
 
         .descanso {
+            @extend .estiramiento;
             grid-area: descanso;
-            @include tarjeta-instalaciones;
-            h3{
-                @include titulo-tarjeta;
-            }
         }
     }
 
     .seccion-vestuario {
-        @include grid(repeat(2, 1fr), (0.5fr, 1fr), 5px, start, center );
+        @extend .seccion-relajacion;
         grid-template-areas: "titulo titulo" "vestuarios duchas";
 
         .titulo {
             @include titulo-seccion;
+            h2{
+                font-family: $fuente-titulo;
+            }
         }
 
         .vestuarios {
@@ -98,14 +101,14 @@
             h3{
                 @include titulo-tarjeta;
             }
+            p{
+                padding-top: 20px;
+            }
         }
 
         .duchas {
+            @extend .vestuarios;
             grid-area: duchas;
-            @include tarjeta-instalaciones;
-            h3{
-                @include titulo-tarjeta;
-            }
         }
     }
 }

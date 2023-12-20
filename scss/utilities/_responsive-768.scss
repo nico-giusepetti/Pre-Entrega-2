@@ -5,6 +5,8 @@
     /*---HOME---*/
     .main-home{
         .seccion1{
+            padding-bottom: 5vh;
+            padding-top: 5vh;
             height: 80vh;
             h1{
                 font-size: 2rem; 
@@ -54,6 +56,12 @@
 
     .main-sobre-nosotros{
         div{
+            .seccion1{
+                p{
+                    display: none;
+                }
+            }
+
             .container-info {
 
                 :nth-child(odd),
@@ -86,6 +94,8 @@
         }
     }
 
+
+    /*---INSTALACIONES---*/
     .main-instalaciones{
         padding: 20px;
         .seccion-entrenamiento{

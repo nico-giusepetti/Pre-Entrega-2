@@ -1,7 +1,7 @@
 /* Header */
 
 header {
-    background-color: black;
+    background-color: nth($list: $colores, $n: 2);
     position: sticky;
     top: 0;
     width: 100%;
@@ -13,15 +13,12 @@ header {
         display: none;
     }
 
-    /* nav */
-    .menu {
-        background-color: black;
+    .menu {    /* nav */
+        background-color: nth($list: $colores, $n: 2);
         top: 60px;
         place-self: center end;
         gap: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex(row, space-between, center);
 
         a {
             text-decoration: none;
@@ -35,16 +32,35 @@ header {
         }
 
         ul {
-            display: flex;
+            @include flex(row, space-between, center);
 
             li {
                 list-style-type: none;
                 padding-right: 30px;
 
+                .pagina-seleccionada{
+                    color: nth($list: $colores, $n: 1);
+                }
+                
                 a {
                     font-size: 25px;
                     color: aliceblue;
                     text-decoration: none;
+                    display: inline-block;
+                    position: relative;
+                    
+                    &:after {
+                        content: "";
+                        display: block;
+                        margin: auto;
+                        height: 2px;
+                        width: 0px;
+                        transition: all .8s;
+                    }
+                    &:hover:after {
+                        width: 100%;
+                        background: nth($list: $colores, $n: 1);
+                    }
                 }
             }
         }
