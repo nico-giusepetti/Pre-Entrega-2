@@ -1,9 +1,7 @@
 /* [VISTA TABLET] */ 
 
-
 @media screen and (max-width: 1024px) {
     /* Header - general */
-
     header {
         @include flex(none, space-between,center);
         

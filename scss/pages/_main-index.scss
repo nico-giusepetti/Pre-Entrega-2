@@ -1,9 +1,10 @@
 /* Main Index / --HOME-- */
 
 .main-home {
-    font-size: 25px;
     text-align: center;
     color: nth($list: $colores, $n: 3);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/mancuernero.jpg);
+    background-attachment:fixed;
     overflow-x: hidden;
 
     .seccion1 {
@@ -14,9 +15,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        background-attachment:fixed;
 
         h1 {
-            font-size: 3rem;
+            font-size: 48px;
             font-weight: 750;
             padding: 0 30px 0 30px;
             text-transform: uppercase; /*texto a letra mayúscula*/
@@ -29,7 +31,7 @@
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: $texto-size;
             padding: 0 60px 0 60px;
             text-shadow: 5px 5px 5px rgb(0, 0, 0);
             padding-bottom: 30px;
@@ -38,15 +40,13 @@
 
     .seccion2 {
         @include flex(column, center, center);
-        background-image: linear-gradient(#080B0A, #373737);
 
         h2 {
-            font-family: $fuente-titulo;
             padding-bottom: 15px;
-            margin-top: 15px;
+            margin-top: 30px;
             color: nth($list: $colores, $n: 1);
-            text-transform: uppercase;
-            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            text-shadow: 5px 5px 5px nth($list: $colores, $n: 2);
+            font-weight: bold;
         }
 
         .container-cards {
@@ -59,13 +59,14 @@
                 padding: 10px;
                 margin: 15px;
                 width: 250px;
-                height: 350px;
-                box-shadow: 2px 2px 10px nth($list: $colores, $n: 1);
+                height: auto;
                 border-radius: 10px;
                 border: solid 2px nth($list: $colores, $n: 2);
                 overflow: hidden;
                 background-color: nth($list: $colores, $n: 3);
                 position: static;
+                transition: 0.7s;
+                box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 0 0  0 2px nth($list: $colores, $n: 1), 0.3em 0.3em 1em rgba(0,0,0,0.3);
                 &:hover{
                     transform: scale(1.1);
                 }
@@ -73,7 +74,8 @@
                 h3 {
                     padding-bottom: 30px;
                     color: nth($list: $colores, $n: 2);
-                    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.467);
+                    text-shadow: 2px 2px 3px nth($list: $colores, $n: 1);
+                    font-weight: bold;
                 }
     
                 p {
@@ -87,20 +89,19 @@
 
     .seccion3 {
         padding: 30px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/fondo.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        backdrop-filter: blur(10px);
 
         h2 {
             text-transform: uppercase;
+            color: nth($list: $colores, $n: 1);
             padding-bottom: 15px;
-            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            text-shadow: 5px 5px 5px nth($list: $colores, $n: 2);
         }
 
         p {
             padding-bottom: 20px;
             text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            font-size: 1.5rem;
         }
 
         a {
@@ -114,6 +115,10 @@
             box-shadow: 2px 2px 10px nth($list: $colores, $n: 3);
             margin: 15px;
             cursor: pointer;
+            &:hover{
+                border: 3px solid nth($list: $colores, $n: 2);
+                box-shadow: 5px 5px 15px nth($list: $colores, $n: 1);
+            }
         }
     }
 }

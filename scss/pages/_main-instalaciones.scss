@@ -2,13 +2,17 @@
 
 .main-instalaciones {
     text-align: center;
-    background: #121212;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
     overflow-x: hidden;
 
     h1 {
-        font-weight: bold;
-        color: nth($list: $colores, $n: 1);
-        padding: 20px;
+        @include titulo-html;
+        padding: 30px;
+        padding-top: 50px;
     }
     
     img { /*estilos para todas las img*/
@@ -22,7 +26,8 @@
     .seccion-entrenamiento {
         @include grid(repeat(2, 1fr), (0.5fr, repeat(2, 1fr)), 5px, start, center);
         grid-template-areas: "titulo titulo" "pesas cardio" "funcional sala";
-        
+        overflow-x: hidden;
+
         .titulo {
             @include titulo-seccion;
             h2{
@@ -60,6 +65,7 @@
     .seccion-relajacion {
         @include grid(repeat(2, 1fr), (0.5fr, 1fr), 5px, start, center );
         grid-template-areas: "titulo titulo" "estiramiento descanso";
+        overflow-x: hidden;
 
         .titulo {
             @include titulo-seccion;
@@ -88,7 +94,8 @@
     .seccion-vestuario {
         @extend .seccion-relajacion;
         grid-template-areas: "titulo titulo" "vestuarios duchas";
-
+        overflow-x: hidden;
+        
         .titulo {
             @include titulo-seccion;
             h2{

@@ -44,6 +44,7 @@ footer {
     }
 
     .copyright {
+        font-family: $fuente-copyright;
         text-align: center;
         color: nth($list: $colores, $n: 3);
         margin-top: 0.5em;

@@ -114,4 +114,19 @@
         }
     }
 
+    /*---TIENDA---*/
+    
+    .main-tienda{
+        .productos{
+            .contenedor-tarjetas{
+                .card{
+                    div{
+                        p{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

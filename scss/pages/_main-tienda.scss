@@ -2,7 +2,12 @@
 
 .main-tienda {
     text-align: center;
-    background: linear-gradient(to bottom, nth($list: $colores, $n: 2) 10%, nth($list: $colores, $n: 1));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../imagenes/fondo5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+    font-size: 20px;
 
     img {     /*estilo para todas las img*/
         height: 40vh;
@@ -10,19 +15,17 @@
     }
 
     .seccion1 {
-        height: 50vh;
         width: 100%;
-        @include flex(column, center, center);
+        @include flex(column, none, center);
         color: nth($list: $colores, $n: 3);
         padding: 30px;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imagenes/banner.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        padding-bottom: 10px;
 
         h1 {
-            font-weight: bold;
-            color: nth($list: $colores, $n: 1);
+            @include titulo-html;
+        }
+        p{
+            text-shadow: 5px 5px 5px nth($list: $colores, $n: 2);
         }
     }
 
@@ -54,13 +57,22 @@
                 width: 300px;
                 color: nth($list: $colores, $n: 3);
                 background-color: nth($list: $colores, $n: 2);
-                box-shadow: 5px 5px 15px nth($list: $colores, $n: 2);
+                box-shadow: 5px 5px 15px nth($list: $colores, $n: 3);
 
                 img {
                     width: 100%;
                     object-fit: cover;
                     border-radius: 10px 10px 0 0;
                     overflow: hidden;
+                }
+                div{
+                    h3{
+                        color: nth($list: $colores, $n: 1);
+                        font-weight: bold;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
                 }
             }           
         }

@@ -16,6 +16,12 @@
     justify-items: $justify-items;
 }
 
+//mixin para los titulos (h1) de los html (excepto el index)
+@mixin titulo-html{
+    font-weight: bold;
+    color: nth($list: $colores, $n: 1);
+    text-shadow: 5px 5px 5px nth($list: $colores, $n: 2);
+}
 
 //mixins utilizados en pagina instalaciones
 //titulo de las secciones de instalaciones
