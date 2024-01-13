@@ -19,7 +19,6 @@ El proyecto consta de cinco páginas principales:
 - **Bootstrap:** Framework para un desarrollo web más rápido y sencillo.
 - **Git y GitHub:** Control de versiones y alojamiento del código fuente.
 
-
 - **Animaciones:** Se han incorporado animaciones para mejorar la experiencia del usuario.
 - **Servidor Web:** Se ha implementado un servidor web para visualizar y probar el proyecto localmente.
 - **Responsive Design:** La página web se adapta a diferentes tamaños de pantalla para una experiencia óptima en dispositivos móviles, tabletas y computadoras.
@@ -28,7 +27,7 @@ El proyecto consta de cinco páginas principales:
 
 1. **Clonar el Repositorio:**
    ```bash
-   git clone https://github.com/tuusuario/slmf-gym.git
+   git clone https://github.com/nico-giusepetti/slmf-gym.git
 
 2. **Abrir con un navegador web**
     Abre el archivo index.html en tu navegador favorito para visualizar la página web.
