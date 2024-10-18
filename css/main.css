@@ -25,7 +25,7 @@ header .logo, header #btn_menu, header label {
 header .menu { /* nav */
   background-color: black;
   top: 60px;
-  place-self: center end;
+  /*place-self: center end;*/
   gap: 5%;
   display: flex;
   flex-direction: row;
