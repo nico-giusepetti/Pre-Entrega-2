@@ -8,6 +8,7 @@ header {
     flex-wrap: wrap;
     z-index: 10;
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+    display: flex;
 
     .logo, #btn_menu, label {
         display: none;
